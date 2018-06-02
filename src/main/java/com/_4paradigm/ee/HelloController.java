@@ -3,6 +3,8 @@ package com._4paradigm.ee;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
+
 
 @RestController
 public class HelloController {
@@ -12,11 +14,14 @@ public class HelloController {
         return "hello yiping";
     }
 
-    @RequestMapping("/getDemo")
+    //用fastjson出现中文乱码的话，记得加produces = "application/json; charset=utf-8"
+    @RequestMapping(value = "/getDemo", produces = "application/json; charset=utf-8")
     public Demo getDemo(){
         Demo demo = new Demo();
         demo.setId(1);
         demo.setName("张三");
+        demo.setCreateTime(new Date());
+        demo.setRemarks("这是一个备注信息");
         return demo;
     }
 }
