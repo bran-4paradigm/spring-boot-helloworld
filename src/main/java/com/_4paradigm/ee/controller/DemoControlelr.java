@@ -25,4 +25,12 @@ public class DemoControlelr {
         return demoService.likeName(name);
     }
 
+    @RequestMapping("/save")
+    public Demo save(){
+        Demo demo = new Demo();
+        demo.setName("李四");
+        demoService.save(demo);
+        return demo;
+    }
+
 }
