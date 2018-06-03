@@ -36,11 +36,14 @@
             <version>1.3.2</version>
         </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>com.github.pagehelper</groupId>-->
-            <!--<artifactId>pagehelper-spring-boot-starter</artifactId>-->
-            <!--<version>1.2.5</version>-->
-        <!--</dependency>-->
+
+        <!-- pagehelper 版本其他的试了几个不好使，试了下4.1.1是可以正确分页的，跟mybatis的版本有关系
+         所以mybatis-spring-boot-starter版本为1.3.2， pagehelper版本为4.1.1可以work-->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>4.1.1</version>
+        </dependency>
 
         <!-- 添加MySQL数据库驱动依赖包 -->
         <dependency>
