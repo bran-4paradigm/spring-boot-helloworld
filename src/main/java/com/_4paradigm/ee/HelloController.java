@@ -11,14 +11,14 @@ public class HelloController {
 
     @RequestMapping("/hello")
     public String hello(){
-        return "hello yiping_1";
+        return "hello yiping_2";
     }
 
     //用fastjson出现中文乱码的话，记得加produces = "application/json; charset=utf-8"
     @RequestMapping(value = "/getDemo", produces = "application/json; charset=utf-8")
     public Demo getDemo(){
         Demo demo = new Demo();
-        demo.setId(10000);
+        demo.setId(1000);
         demo.setName("张三和李四and王五");
         demo.setCreateTime(new Date());
         demo.setRemarks("这是一个备注信息");
