@@ -1,5 +1,6 @@
 package com._4paradigm.ee;
 
+import com._4paradigm.ee.config.Constants;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,7 +12,7 @@ public class HelloController {
 
     @RequestMapping("/hello")
     public String hello(){
-        return "hello yiping_2";
+        return "hello yiping_2 | " + Constants.name;
     }
 
     //用fastjson出现中文乱码的话，记得加produces = "application/json; charset=utf-8"
